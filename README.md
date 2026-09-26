@@ -47,6 +47,7 @@ It isn't designed to be friendly, automatic, or cozy. It's built for those who w
   <i>You will loose your personal life if you install this distribution.<br>You have been warned!!</i>
 </p>
 
+---
 
 # 1. Partitioning the disk and mounting the partitions
 
