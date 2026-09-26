@@ -48,9 +48,9 @@ It isn't designed to be friendly, automatic, or cozy. It's built for those who w
 </p>
 
 
-### 1. Partitioning the disk and mounting the partitions
+# 1. Partitioning the disk and mounting the partitions
 
-# 1. Partitioning the disk using cfdisk
+## 1. Partitioning the disk using cfdisk
 
 cfdisk /dev/your-disk
 
@@ -58,13 +58,13 @@ Create an 256mb EFI partition
 Swap partiton ( if you want swap partition )
 Root partition
 
-# 2. Formatting partitions
+## 2. Formatting partitions
 ```
 mkfs.fat -F 32 /dev/efi-pertition
 mkswap /dev/swap-partition ( if created )
 mkfs.ext4 /dev/root-partition
 ```
-# 3. Mounting partitions
+## 3. Mounting partitions
 ```
 mount /dev/root-partition /mnt
 mkdir /mnt/efi
@@ -74,19 +74,19 @@ swapon /dev/swap-partition ( if created )
 ```
 cd /mnt
 ```
-### 2. Downloadng and extracting the stage archive with the base system
+# 2. Downloadng and extracting the stage archive with the base system
 
-# 1. Downloading the stage archive
+## 1. Downloading the stage archive
 ```
 wget https://github.com/Nick-cpp/NoPersonalLife-Linux/releases/download/release/stage.tar.xz
 ```
-# 2. Extracting the stage archive
+## 2. Extracting the stage archive
 ```
 tar -xJvf stage.tar.xz
 ```
-### 3. Chrooting into the system
+# 3. Chrooting into the system
 
-# 1. Preparing for chroot
+## 1. Preparing for chroot
 ```
 mount -o bind /dev /mnt/dev
 mount -o bind /dev/pts /mnt/dev/pts
@@ -94,7 +94,7 @@ mount -t proc proc /mnt/proc
 mount -t sysfs sysfs /mnt/sys
 mount -t tmpfs tmpfs /mnt/run 
 ```
-# 2. Chrooting
+## 2. Chrooting
 ```
 chroot /mnt /bin/sh
 source /etc/profile
@@ -105,9 +105,9 @@ chown -R root /
 chmod 1777 /tmp
 chmod 4755 /bin/busybox
 ```
-### 4. Building and installing needed packages
+# 4. Building and installing needed packages
 
-# 1. Downloading, building and installing bash
+## 1. Downloading, building and installing bash
 ```
 cd
 ```
@@ -125,22 +125,22 @@ make install
 ```
 cd
 ```
-# 2. Sync the mspm repository
+## 2. Sync the mspm repository
 ```
 mspm sync
 ```
-# 3. Configure compile options in /etc/mspm/make.conf
+## 3. Configure compile options in /etc/mspm/make.conf
 example configuration:
 ``
 CFLAGS="-march=native -O2 -pipe"
 CXXFLAGS="-march=native -O2 -pipe"
 MAKEFLAGS="${MAKEFLAGS} -j8"
 ``
-# 4. Installing needed packages via mspm
+## 4. Installing needed packages via mspm
 ```
 mspm install tar m4 flex bison pkgconf gawk ncurses bash perl busybox npl-init openssl libexpat python util-linux libtool autoconf automake gettext popt efivar efibootmgr grub
 ```
-# 5. Installing the NPL-Linux kernel
+## 5. Installing the NPL-Linux kernel
 
 binary kernel:
 ```
@@ -150,7 +150,7 @@ compile kernel:
 ```
 mspm install elfutils kernel
 ```
-# 6. Installing network daemon
+## 6. Installing network daemon
 
 dhcpcd:
 ```
@@ -173,11 +173,11 @@ Enabling the services:
 echo "dbus" >> /etc/npl-init/sv/DEFAULT
 echo "iwd" >> /etc/npl-init/sv/DEFAULT
 ```
-# 7. Upgrade packages in your system ( optional )
+## 7. Upgrade packages in your system ( optional )
 ```
 mspm update
 ```
-### 5. Making the system bootable
+# 5. Making the system bootable
 
 1. Installing grub the bootloader
 ```
@@ -188,7 +188,7 @@ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=NoPersonal
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-# 2. Creating the /etc/fstab
+## 2. Creating the /etc/fstab
 
 You may write the fstab by yourself or use `npl fstab generator`:
 
@@ -196,13 +196,13 @@ You may write the fstab by yourself or use `npl fstab generator`:
 fstab-gen > /etc/fstab
 ```
 
-### 6. Final steps
+# 6. Final steps
 
-# 1. Installing a password for root
+## 1. Installing a password for root
 ```
 passwd
 ```
-# 2. exiting and rebooting
+## 2. exiting and rebooting
 ```
 exit
 ```
@@ -224,7 +224,7 @@ umount /mnt
 ```
 reboot
 ```
-### 7. Ending
+# 7. Ending
 
 Put your service scripts in /etc/npl-init/sv
 
