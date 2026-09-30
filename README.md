@@ -139,7 +139,7 @@ MAKEFLAGS="${MAKEFLAGS} -j8"
 ```
 ## 4. Installing needed packages via mspm
 ```
-mspm install tar m4 flex bison pkgconf gawk ncurses bash perl busybox npl-init openssl libexpat python util-linux libtool autoconf automake gettext popt efivar efibootmgr grub
+mspm install m4 flex bison pkgconf gawk ncurses bash perl busybox npl-init openssl libexpat python util-linux libtool autoconf automake gettext popt efivar efibootmgr grub
 ```
 ## 5. Installing the NPL-Linux kernel
 
