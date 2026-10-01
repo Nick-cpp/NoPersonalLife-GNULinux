@@ -139,7 +139,7 @@ MAKEFLAGS="${MAKEFLAGS} -j8"
 ```
 ## 4. Installing needed packages via mspm
 ```
-mspm install m4 flex bison pkgconf gawk ncurses bash perl npl-init openssl libexpat python util-linux libtool autoconf automake gettext popt efivar efibootmgr grub
+mspm install m4 flex bison gawk bash npl-init python util-linux libtool autoconf automake gettext efibootmgr grub
 ```
 ## 5. Installing the NPL-Linux kernel
 
@@ -149,7 +149,7 @@ mspm install kernel-bin
 ```
 compile kernel:
 ```
-mspm install elfutils kernel
+mspm install kernel
 ```
 ## 6. Installing network daemon
 
