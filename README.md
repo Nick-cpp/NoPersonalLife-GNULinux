@@ -209,9 +209,6 @@ You may write the fstab by yourself or use `npl fstab generator`:
 
 ```
 mspm install fstab-gen
-```
-
-```
 fstab-gen > /etc/fstab
 ```
 
