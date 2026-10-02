@@ -1,4 +1,4 @@
-# NoPersonalLife Linux
+# NoPersonalLife GNU/Linux
 
 ---
 
@@ -250,4 +250,4 @@ npl-init repository: `https://github.com/Nick-cpp/npl-init`
 
 mspm repository: `https://github.com/Nick-cpp/mspm`
 
-**Thanks for using NoPersonalLife Linux!**
+**Thanks for using NoPersonalLife GNU/Linux!**
