@@ -180,12 +180,9 @@ echo "dhcpcd" >> /etc/npl-init/sv/DEFAULT
 ```
 iwd:
 ```
-mspm install cmake dbus iwd
+mspm install iwd
 ```
-or:
-```
-mspm install cmake-bin dbus iwd
-```
+
 Enabling the services:
 ```
 echo "dbus" >> /etc/npl-init/sv/DEFAULT
