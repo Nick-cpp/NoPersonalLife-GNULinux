@@ -82,6 +82,13 @@ mkdir /mnt/efi
 mount /dev/efi-partition /mnt/efi
 swapon /dev/swap-partition ( if created )
 ```
+
+# 4. Verifying that partitions are correct
+
+```
+lsblk
+```
+
 ```
 cd /mnt
 ```
