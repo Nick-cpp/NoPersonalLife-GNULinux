@@ -52,9 +52,19 @@ It isn't designed to be friendly, automatic, or cozy. It's built for those who w
 # 1. Partitioning the disk and mounting the partitions
 
 ## 1. Partitioning the disk using cfdisk
+
+Looking for block devices via lsblk
+
+```
+lsblk
+```
+
+Partitioning
+
 ```
 cfdisk /dev/your-disk
 ```
+
 Create an 256mb EFI partition
 Swap partiton ( if you want swap partition )
 Root partition
