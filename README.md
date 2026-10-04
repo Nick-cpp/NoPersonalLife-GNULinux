@@ -121,7 +121,7 @@ source /etc/profile
 ```
 chown -R root /
 chmod 1777 /tmp
-chmod 4755 /bin/*
+chmod 4755 /bin/busybox
 ```
 # 4. Building and installing needed packages
 
@@ -271,7 +271,7 @@ mspm update
 
 ```
 mkdir /home
-useradd -m user
+adduser user
 ```
 
 ---
@@ -301,8 +301,8 @@ permit persist user
 Or you may add your user to wheel group and configure doas for it
 
 ```
-groupadd wheel
-groupadd user wheel
+addgroup wheel
+addgroup user wheel
 ```
 
 file: /etc/doas.conf
