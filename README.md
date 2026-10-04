@@ -188,10 +188,7 @@ Enabling the services:
 echo "dbus" >> /etc/npl-init/sv/DEFAULT
 echo "iwd" >> /etc/npl-init/sv/DEFAULT
 ```
-## 7. Upgrade packages in your system ( optional )
-```
-mspm update
-```
+
 # 5. Making the system bootable
 
 1. Installing grub the bootloader
@@ -251,3 +248,54 @@ npl-init repository: `https://github.com/Nick-cpp/npl-init`
 mspm repository: `https://github.com/Nick-cpp/mspm`
 
 **Thanks for using NoPersonalLife GNU/Linux!**
+
+# After installation
+
+### Optional instructions after the installation of NoPersonalLife GNU/Linux
+
+### Upgrading the system
+
+```
+mspm update
+```
+
+### Creating a user
+
+```
+mkdir /home
+adduser user
+```
+
+### Installing and configuring opendoas ( for gaining root privileges )
+
+```
+mspm install opendoas
+```
+
+Create /etc/doas.conf and configure it:
+
+```
+permit user
+```
+
+If you want doas to remember your password for a while and not ask for it every time
+
+```
+permit persist user
+```
+
+Also you may add your user to wheel group and configure doas for it
+
+```
+addgroup user wheel
+```
+
+```
+permit :wheel
+```
+
+If you want doas to remember your password for a while and not ask for it every time
+
+```
+permit persist :wheel
+```
