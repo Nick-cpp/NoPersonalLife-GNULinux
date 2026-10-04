@@ -251,6 +251,8 @@ mspm repository: `https://github.com/Nick-cpp/mspm`
 
 **Thanks for using NoPersonalLife GNU/Linux!**
 
+---
+
 # After installation
 
 ### Optional instructions after installation of NoPersonalLife GNU/Linux
