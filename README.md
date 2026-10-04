@@ -296,7 +296,9 @@ file: /etc/doas.conf
 permit persist user
 ```
 
-Also you may add your user to wheel group and configure doas for it
+---
+
+Or you may add your user to wheel group and configure doas for it
 
 ```
 addgroup user wheel
