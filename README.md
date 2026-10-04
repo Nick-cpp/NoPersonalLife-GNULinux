@@ -253,7 +253,9 @@ mspm repository: `https://github.com/Nick-cpp/mspm`
 
 # After installation
 
-### Optional instructions after the installation of NoPersonalLife GNU/Linux
+### Optional instructions after installation of NoPersonalLife GNU/Linux
+
+---
 
 ### Upgrading the system
 
@@ -261,12 +263,16 @@ mspm repository: `https://github.com/Nick-cpp/mspm`
 mspm update
 ```
 
+---
+
 ### Creating a user
 
 ```
 mkdir /home
 adduser user
 ```
+
+---
 
 ### Installing and configuring opendoas ( for gaining root privileges )
 
