@@ -149,6 +149,8 @@ mspm sync
 ```
 ## 3. Configure compile options in /etc/mspm/make.conf
 example configuration:
+
+file: /etc/mspm/make.conf
 ```
 CFLAGS="-march=native -O2 -pipe"
 CXXFLAGS="-march=native -O2 -pipe"
@@ -274,12 +276,14 @@ mspm install opendoas
 
 Create /etc/doas.conf and configure it:
 
+file: /etc/doas.conf
 ```
 permit user
 ```
 
 If you want doas to remember your password for a while and not ask for it every time
 
+file: /etc/doas.conf
 ```
 permit persist user
 ```
@@ -290,12 +294,14 @@ Also you may add your user to wheel group and configure doas for it
 addgroup user wheel
 ```
 
+file: /etc/doas.conf
 ```
 permit :wheel
 ```
 
 If you want doas to remember your password for a while and not ask for it every time
 
+file: /etc/doas.conf
 ```
 permit persist :wheel
 ```
