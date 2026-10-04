@@ -301,6 +301,7 @@ permit persist user
 Or you may add your user to wheel group and configure doas for it
 
 ```
+addgroup wheel
 addgroup user wheel
 ```
 
