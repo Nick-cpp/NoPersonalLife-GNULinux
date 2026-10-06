@@ -48,6 +48,9 @@ It isn't designed to be friendly, automatic, or cozy. It's built for those who w
 </p>
 
 ---
+# Installation
+In theory, you can install NoPersonalLife GNU/Linux from any other livecd or installed system not only NoPersonalLife GNU/Linux livecd
+Installation is tested on: NoPersonalLife GNU/Linux livecd, Parabola GNU/Linux-libre livecd, Gentoo GNU/Linux.
 
 # 1. Partitioning the disk and mounting the partitions
 
