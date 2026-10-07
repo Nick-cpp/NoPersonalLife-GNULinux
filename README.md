@@ -99,7 +99,7 @@ cd /mnt
 
 ## 1. Downloading the stage archive
 ```
-wget https://github.com/Nick-cpp/NoPersonalLife-Linux/releases/download/release/stage.tar.xz
+wget https://github.com/Nick-cpp/NoPersonalLife-GNULinux/releases/download/release/stage.tar.xz
 ```
 ## 2. Extracting the stage archive
 ```
@@ -201,7 +201,7 @@ echo "iwd" >> /etc/npl-init/sv/DEFAULT
 mount -t efivarfs efivarfs /sys/firmware/efi/efivars
 ```
 ```
-grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=NoPersonalLife-Linux --recheck
+grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=NoPersonalLife-GNULinux --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
