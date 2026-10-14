@@ -201,7 +201,7 @@ echo "iwd" >> /etc/npl-init/sv/DEFAULT
 mount -t efivarfs efivarfs /sys/firmware/efi/efivars
 ```
 ```
-grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=NoPersonalLife-GNULinux --recheck
+grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=NoPersonalLife-GNU/Linux --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
